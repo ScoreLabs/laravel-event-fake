@@ -1,5 +1,5 @@
 {
-    "name": "ScoreLabs/laravel-event-fake",
+    "name": "score-labs/laravel-event-fake",
     "description": "An enhanced event fake for Laravel event testing",
     "license": "MIT",
     "keywords": ["laravel event", "laravel testing"],
