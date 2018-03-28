@@ -11,13 +11,13 @@
     ],
     "require": {
         "php": ">=7.0.0",
-        "illuminate/support": "^5.0",
-        "orchestra/testbench": "3.5"
+        "illuminate/support": "^5.0"
     },
     "require-dev": {
         "php-mock/php-mock-mockery": "^1.1",
         "phpunit/phpunit": ">6.0",
-        "mockery/mockery": "~1.0"
+        "mockery/mockery": "~1.0",
+        "orchestra/testbench": "3.5"
     },
     "autoload": {
         "psr-4": {
@@ -39,10 +39,10 @@
     "scripts": {
         "test": [
             "rm -rf ./vendor; rm composer.lock; echo 1",
-            "composer require orchestra/testbench 3.6",
+            "composer require --dev orchestra/testbench 3.6",
             "./vendor/bin/phpunit | tee phpunit.6.log",
             "rm -rf ./vendor; rm composer.lock; echo 1",
-            "composer require orchestra/testbench 3.5",
+            "composer require --dev orchestra/testbench 3.5",
             "./vendor/bin/phpunit | tee phpunit.5.log",
             "rm -rf ./vendor; rm composer.lock; echo 1",
             "cat phpunit.*.log"
