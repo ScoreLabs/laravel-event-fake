@@ -9,6 +9,16 @@ of just testing the listeners in isolation, but leaving all of the events unfake
 
 Score Labs' Laravel Event Fake adds two new methods to the already great `Event` facade.
 
+### Installation
+```
+composer require --dev score-labs/laravel-event-fake
+```
+In your test classes, just import the new Event facade
+```php
+use ScoreLabs\Event; // full namespace
+use Event; // overwritten alias via laravel auto-discovery
+```
+## Methods
 ### Fake Except
 There are two ways to call `Event::fakeExcept`:
 ```php
@@ -39,13 +49,6 @@ If you want to fake all events, but you still want events that you manually adde
 Event::fakeExceptModels();
 ```
 This way you can fake all events as usual, but still let your models get any necessary information they may need during a creating or saving event.
-
-## So how do I use it?
-In your test classes, just import the new Event facade
-```php
-use ScoreLabs\Event; // full namespace
-use Event; // overwritten alias via laravel auto-discovery
-```
 
 ## But what about all of the great existing features of Event::fake?
 They are all still there! This is just a drop in enhancement and will be compatible with all usages of Event::fake in Laravel 5.5+
