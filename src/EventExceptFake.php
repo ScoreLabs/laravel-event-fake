@@ -30,7 +30,7 @@ class EventExceptFake extends EventFake
         });
     }
 
-    protected function shouldFakeEvent($eventName)
+    protected function shouldFakeEvent($eventName, $_)
     {
         return ! in_array($eventName, $this->events_to_not_fake);
     }
